@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'landing#index'
 
   get '/register', to: 'users#new'
+  get '/login', to: 'users#login_form'
+  post '/login', to: 'users#login_user'
   resources :user_parties, only: [:create]
 
   resources :users, only: %i[show create] do

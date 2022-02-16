@@ -3,3 +3,4 @@
 <% @users.each do |user| %>
 <%= link_to "#{user.email}'s Dashboard", "/users/#{user.id}" %>
 <% end %>
+<%= link_to "Log In", "/login" %>
