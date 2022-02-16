@@ -12,6 +12,12 @@
   <body>
     <%= link_to 'Home', root_path %>
     <h1>Viewing Party Light</h1>
+
+    <% flash.each do |type, notice| %>
+        <div class="alert alert-info">
+          <p><%= notice %></p>
+        </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
